@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subplaza · 兼职经历 · 尹秀敏</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/colors.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">尹秀敏<span>.</span></a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link">首页</a>
+        <a href="subplaza.html" class="nav-link active">Subplaza</a>
+        <a href="ocebase.html" class="nav-link">Ocebase</a>
+        <a href="contact.html" class="nav-link">联系</a>
+      </div>
+      <button class="theme-toggle" aria-label="切换主题">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      </button>
+      <button class="nav-menu-btn" aria-label="菜单" onclick="document.getElementById('navLinks').classList.toggle('open')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Main -->
+  <main class="main">
+    <div class="container">
+      <!-- Experience Header -->
+      <div class="exp-header fade-in">
+        <div class="exp-header-left">
+          <h2>Subplaza</h2>
+          <p class="exp-meta">2027.07<span class="tag">兼职</span></p>
+        </div>
+        <div class="exp-header-right">
+          针对"Genshin Impact"进行 Blog 选题，输出符合 SEO &amp; GEO 标准的 Blog。
+        </div>
+      </div>
+
+      <!-- Blog Grid -->
+      <div class="blog-grid">
+        <div class="blog-card fade-in-delay-1" data-blog="sub-1">
+          <div class="blog-cover">
+            <div class="cover-bg gradient-1"></div>
+            <div class="cover-label">Genshin Impact</div>
+          </div>
+          <div class="blog-body">
+            <p class="blog-title">Genshin Impact Sadrone Build Guide: Weapon, Artifact, Teams &amp; Pull Advice</p>
+          </div>
+        </div>
+
+        <div class="blog-card fade-in-delay-1" data-blog="sub-2">
+          <div class="blog-cover">
+            <div class="cover-bg gradient-3"></div>
+            <div class="cover-label">Genshin Impact</div>
+          </div>
+          <div class="blog-body">
+            <p class="blog-title">Genshin Impact 4.7 Tier List: Best Characters for Spiral Abyss</p>
+          </div>
+        </div>
+
+        <div class="blog-card fade-in-delay-1" data-blog="sub-3">
+          <div class="blog-cover">
+            <div class="cover-bg gradient-6"></div>
+            <div class="cover-label">Genshin Impact</div>
+          </div>
+          <div class="blog-body">
+            <p class="blog-title">Genshin Impact Artifact Farming Guide: Efficient Routes &amp; Priority</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal -->
+  <div class="modal-overlay">
+    <div class="modal">
+      <button class="modal-close" aria-label="关闭">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div class="modal-cover"><div class="cover-bg"></div></div>
+      <div class="modal-content">
+        <h2 class="modal-title"></h2>
+        <div class="modal-meta"></div>
+        <div class="modal-article"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">© 2025 尹秀敏 · 内容运营求职作品集</div>
+  </footer>
+
+  <script>
+  window.__blogData = {
+    "sub-1": {
+      gradient: "gradient-1",
+      title: "Genshin Impact Sadrone Build Guide: Weapon, Artifact, Teams & Pull Advice",
+      meta: 'Subplaza<span class="dot"></span>2027.07<span class="dot"></span>Genshin Impact',
+      content: '\
+        <h3>角色概述</h3>\
+        <p>Sadrone 是 Genshin Impact 中一位极具潜力的角色，凭借其独特的技能机制和元素反应能力，在当前版本中表现出色。本攻略将从武器选择、圣遗物搭配、队伍组建以及抽卡建议四个维度进行全面解析。</p>\
+        \
+        <h3>武器推荐</h3>\
+        <ul>\
+          <li>首选武器：提供高额元素伤害加成，完美契合 Sadrone 的输出模式</li>\
+          <li>替代武器：四星武器中的优质选择，适合 F2P 玩家</li>\
+          <li>过渡武器：前期可用的三星武器，帮助平滑过渡</li>\
+        </ul>\
+        \
+        <h3>圣遗物搭配</h3>\
+        <p>主词条推荐：时之沙（攻击力%）、空之杯（元素伤害%）、理之冠（暴击率/暴击伤害）。副词条优先级为暴击率 > 暴击伤害 > 攻击力% > 元素精通。</p>\
+        \
+        <h3>队伍组建</h3>\
+        <ul>\
+          <li>蒸发队：Sadrone + 水系辅助 + 增伤辅助 + 生存位</li>\
+          <li>超载队：Sadrone + 雷系角色 + 风系扩散 + 护盾角色</li>\
+          <li>纯色队：同元素共鸣最大化输出</li>\
+        </ul>\
+        \
+        <h3>抽卡建议</h3>\
+        <p>对于新手玩家，建议优先获取 Sadrone 的命之座关键节点（C2 和 C6）。对于资源有限的玩家，零命 Sadrone 搭配合适的武器和圣遗物同样可以应对大部分内容。</p>\
+      '
+    },
+    "sub-2": {
+      gradient: "gradient-3",
+      title: "Genshin Impact 4.7 Tier List: Best Characters for Spiral Abyss",
+      meta: 'Subplaza<span class="dot"></span>2027.07<span class="dot"></span>Genshin Impact',
+      content: '\
+        <h3>4.7 版本环境概述</h3>\
+        <p>4.7 版本带来了全新的 Spiral Abyss 环境，深境螺旋的怪物配置和机制均有调整。本篇 Tier List 基于实际测试数据和社区反馈，对当前版本的角色强度进行综合评估。</p>\
+        \
+        <h3>T0 级别 — 必练角色</h3>\
+        <ul>\
+          <li>纳西妲：草系核心，反应队伍的基石</li>\
+          <li>芙宁娜：全队增伤天花板，适配多种队伍</li>\
+          <li>雷电将军：充能 + 输出一体化，泛用性极强</li>\
+        </ul>\
+        \
+        <h3>T1 级别 — 强力推荐</h3>\
+        <ul>\
+          <li>夜兰：高频水系输出，大世界与深渊双优</li>\
+          <li>钟离：最强护盾，生存保障</li>\
+          <li>万叶：聚怪 + 增伤，风系辅助首选</li>\
+        </ul>\
+        \
+        <h3>Spiral Abyss 实战技巧</h3>\
+        <p>在 4.7 版本的深渊中，合理利用元素反应和角色切换时机是通关关键。建议上半队伍以单体爆发为主，下半队伍以持续输出和范围伤害为主。</p>\
+      '
+    },
+    "sub-3": {
+      gradient: "gradient-6",
+      title: "Genshin Impact Artifact Farming Guide: Efficient Routes & Priority",
+      meta: 'Subplaza<span class="dot"></span>2027.07<span class="dot"></span>Genshin Impact',
+      content: '\
+        <h3>圣遗物刷取优先级</h3>\
+        <p>圣遗物是角色养成中最耗时也最影响体验的部分。合理规划刷取顺序，可以最大化树脂的使用效率。建议按照主 C > 关键辅助 > 副 C 的顺序进行投入。</p>\
+        \
+        <h3>高效刷取路线</h3>\
+        <ul>\
+          <li>绝缘之旗印：适合需要充能的角色，优先级最高</li>\
+          <li>饰金之梦：草系反应队伍核心圣遗物</li>\
+          <li>沉沦之心：水系输出角色的首选</li>\
+          <li>逐影猎人：暴击率加成优秀，适配多种输出角色</li>\
+        </ul>\
+        \
+        <h3>树脂分配策略</h3>\
+        <p>前期（AR 1-40）：以角色突破材料和天赋书为主，圣遗物只需过渡用。中期（AR 40-50）：开始集中刷取主 C 的圣遗物套装。后期（AR 50+）：精细优化副词条，追求双暴属性。</p>\
+        \
+        <h3>常见误区</h3>\
+        <ul>\
+          <li>不要过早投入树脂刷圣遗物，等级和天赋优先</li>\
+          <li>四圣遗物主词条正确即可使用，不必追求完美副词条</li>\
+          <li>合理利用圣遗物转换功能，减少体力浪费</li>\
+        </ul>\
+      '
+    }
+  };
+  </script>
+  <script src="js/main.js"></script>
+</body>
+</html>

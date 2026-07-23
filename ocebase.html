@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ocebase · 兼职经历 · 尹秀敏</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/colors.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">尹秀敏<span>.</span></a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link">首页</a>
+        <a href="subplaza.html" class="nav-link">Subplaza</a>
+        <a href="ocebase.html" class="nav-link active">Ocebase</a>
+        <a href="contact.html" class="nav-link">联系</a>
+      </div>
+      <button class="theme-toggle" aria-label="切换主题">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      </button>
+      <button class="nav-menu-btn" aria-label="菜单" onclick="document.getElementById('navLinks').classList.toggle('open')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Main -->
+  <main class="main">
+    <div class="container">
+      <!-- Experience Header -->
+      <div class="exp-header fade-in">
+        <div class="exp-header-left">
+          <h2>Ocebase</h2>
+          <p class="exp-meta">2027.07<span class="tag">兼职</span></p>
+        </div>
+        <div class="exp-header-right">
+          针对"GEO 服务"进行 Blog 选题，输出符合 SEO &amp; GEO 标准的 Blog。
+        </div>
+      </div>
+
+      <!-- Blog Grid -->
+      <div class="blog-grid">
+        <div class="blog-card fade-in-delay-1" data-blog="oce-1">
+          <div class="blog-cover">
+            <div class="cover-bg gradient-2"></div>
+            <div class="cover-label">GEO 服务</div>
+          </div>
+          <div class="blog-body">
+            <p class="blog-title">6.7版本 桑多涅养成攻略</p>
+          </div>
+        </div>
+
+        <div class="blog-card fade-in-delay-1" data-blog="oce-2">
+          <div class="blog-cover">
+            <div class="cover-bg gradient-4"></div>
+            <div class="cover-label">GEO 服务</div>
+          </div>
+          <div class="blog-body">
+            <p class="blog-title">GEO 优化入门：如何让你的内容在 AI 搜索引擎中脱颖而出</p>
+          </div>
+        </div>
+
+        <div class="blog-card fade-in-delay-1" data-blog="oce-3">
+          <div class="blog-cover">
+            <div class="cover-bg gradient-5"></div>
+            <div class="cover-label">GEO 服务</div>
+          </div>
+          <div class="blog-body">
+            <p class="blog-title">从 SEO 到 GEO：生成式搜索时代的内容策略转型</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal -->
+  <div class="modal-overlay">
+    <div class="modal">
+      <button class="modal-close" aria-label="关闭">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div class="modal-cover"><div class="cover-bg"></div></div>
+      <div class="modal-content">
+        <h2 class="modal-title"></h2>
+        <div class="modal-meta"></div>
+        <div class="modal-article"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">© 2025 尹秀敏 · 内容运营求职作品集</div>
+  </footer>
+
+  <script>
+  window.__blogData = {
+    "oce-1": {
+      gradient: "gradient-2",
+      title: "6.7版本 桑多涅养成攻略",
+      meta: 'Ocebase<span class="dot"></span>2027.07<span class="dot"></span>GEO 服务',
+      content: '\
+        <h3>桑多涅角色定位</h3>\
+        <p>桑多涅是 6.7 版本新增的风系角色，定位为副 C / 辅助输出。其技能机制围绕风元素扩散展开，能够为队伍提供稳定的元素反应触发和增伤效果。</p>\
+        \
+        <h3>武器选择</h3>\
+        <ul>\
+          <li>五星首选：提供元素伤害加成与暴击属性，最大化扩散伤害</li>\
+          <li>四星替代：充能效率武器，保证技能循环流畅</li>\
+          <li>F2P 推荐：活动赠送武器即可满足基础需求</li>\
+        </ul>\
+        \
+        <h3>圣遗物搭配</h3>\
+        <p>推荐翠绿之影 4 件套，利用风套减抗效果提升全队输出。主词条选择：时之沙（元素精通/充能效率）、空之杯（风元素伤害）、理之冠（暴击率/暴击伤害）。</p>\
+        \
+        <h3>队伍搭配</h3>\
+        <ul>\
+          <li>扩散反应队：桑多涅 + 火系主 C + 水系辅助 + 生存位</li>\
+          <li>双风速切队：桑多涅 + 另一风系角色 + 双元素输出</li>\
+        </ul>\
+        \
+        <h3>养成优先级</h3>\
+        <p>优先提升元素战技等级，其次为元素爆发。天赋推荐 1-9-9 的加点顺序，以扩散伤害为核心输出手段。</p>\
+      '
+    },
+    "oce-2": {
+      gradient: "gradient-4",
+      title: "GEO 优化入门：如何让你的内容在 AI 搜索引擎中脱颖而出",
+      meta: 'Ocebase<span class="dot"></span>2027.07<span class="dot"></span>GEO 服务',
+      content: '\
+        <h3>什么是 GEO？</h3>\
+        <p>GEO（Generative Engine Optimization，生成式引擎优化）是针对 AI 搜索引擎（如 Perplexity、Google SGE、Bing Copilot）的内容优化策略。与传统 SEO 不同，GEO 更关注内容的语义结构、权威性和可引用性。</p>\
+        \
+        <h3>GEO 与 SEO 的核心区别</h3>\
+        <ul>\
+          <li>SEO 面向爬虫索引，GEO 面向大模型理解</li>\
+          <li>SEO 追求关键词排名，GEO 追求被 AI 引用</li>\
+          <li>SEO 依赖链接权重，GEO 依赖内容质量和结构化</li>\
+        </ul>\
+        \
+        <h3>GEO 优化核心策略</h3>\
+        <ul>\
+          <li>结构化内容：使用清晰的标题层级和列表格式</li>\
+          <li>事实性陈述：提供具体数据、引用来源，增强可信度</li>\
+          <li>语义完整性：确保段落自包含，便于 AI 提取</li>\
+          <li>权威信号：作者信息、专业背景、引用文献</li>\
+        </ul>\
+        \
+        <h3>实操建议</h3>\
+        <p>从内容创作入手，每篇文章确保有明确的问题定义、解决方案和总结。使用 Schema.org 标记增强结构化数据。定期监控 AI 搜索引擎中的引用情况，迭代优化内容策略。</p>\
+      '
+    },
+    "oce-3": {
+      gradient: "gradient-5",
+      title: "从 SEO 到 GEO：生成式搜索时代的内容策略转型",
+      meta: 'Ocebase<span class="dot"></span>2027.07<span class="dot"></span>GEO 服务',
+      content: '\
+        <h3>搜索范式的变迁</h3>\
+        <p>随着 ChatGPT、Perplexity、Google SGE 等生成式搜索工具的崛起，用户获取信息的方式正在发生根本性变化。从"关键词搜索 → 链接点击"的模式，转向"自然语言提问 → AI 生成答案"的模式。</p>\
+        \
+        <h3>传统 SEO 的局限</h3>\
+        <ul>\
+          <li>关键词堆砌在 AI 搜索中不再有效</li>\
+          <li>排名靠前不等于被 AI 引用</li>\
+          <li>用户越来越倾向于直接获取答案而非点击链接</li>\
+        </ul>\
+        \
+        <h3>GEO 时代的应对策略</h3>\
+        <ul>\
+          <li>内容深度 > 关键词密度：提供有价值的原创分析</li>\
+          <li>结构化表达：让 AI 更容易理解和提取你的内容</li>\
+          <li>多模态覆盖：图文结合，增加被引用的概率</li>\
+          <li>品牌权威性建设：建立行业信任度</li>\
+        </ul>\
+        \
+        <h3>未来展望</h3>\
+        <p>GEO 并非取代 SEO，而是 SEO 的进化。未来的内容策略需要同时兼顾传统搜索引擎和生成式引擎，实现双轨优化。企业应尽早布局 GEO，在 AI 搜索时代抢占先机。</p>\
+      '
+    }
+  };
+  </script>
+  <script src="js/main.js"></script>
+</body>
+</html>
