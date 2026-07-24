@@ -1,27 +1,6 @@
 (function () {
   "use strict";
 
-  /* ===== Theme Toggle ===== */
-  var themeToggle = document.querySelector(".theme-toggle");
-  var savedTheme = localStorage.getItem("theme");
-
-  if (savedTheme === "dark") {
-    document.documentElement.setAttribute("data-theme", "dark");
-  }
-
-  if (themeToggle) {
-    themeToggle.addEventListener("click", function () {
-      var current = document.documentElement.getAttribute("data-theme");
-      if (current === "dark") {
-        document.documentElement.removeAttribute("data-theme");
-        localStorage.setItem("theme", "light");
-      } else {
-        document.documentElement.setAttribute("data-theme", "dark");
-        localStorage.setItem("theme", "dark");
-      }
-    });
-  }
-
   /* ===== Full-Page Scroll with Resistance & Bounce ===== */
   var track = document.getElementById("scrollTrack");
   var sections = track ? track.querySelectorAll(".snap-section") : [];
@@ -192,7 +171,7 @@
   function onMouseDown(e) {
     if (isAnimating) return;
     // Don't interfere with clicks on cards/buttons
-    if (e.target.closest(".blog-card") || e.target.closest(".theme-toggle") ||
+    if (e.target.closest(".blog-card") ||
         e.target.closest(".modal-overlay") || e.target.closest("a")) return;
     mouseDragging = true;
     mouseStartY = e.clientY;
