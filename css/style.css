@@ -327,7 +327,7 @@ ul {
 }
 
 .blog-cover .cover-bg.gradient-4 {
-  background-image: linear-gradient(rgba(0,0,0,0.02), rgba(0,0,0,0.08)), url('../images/oce-2-cover.png');
+  background-image: linear-gradient(rgba(0,0,0,0.02), rgba(0,0,0,0.08)), url('../images/oce-2-cover.jpg');
 }
 
 .blog-cover .cover-bg.gradient-5 {
@@ -335,19 +335,19 @@ ul {
 }
 
 .blog-cover .cover-bg.gradient-7 {
-  background-image: linear-gradient(rgba(0,0,0,0.02), rgba(0,0,0,0.08)), url('../images/oce-4-cover.png');
+  background-image: linear-gradient(rgba(0,0,0,0.02), rgba(0,0,0,0.08)), url('../images/oce-4-cover.jpg');
 }
 
 .blog-cover .cover-bg.cover-duo-1 {
-  background-image: linear-gradient(rgba(0,0,0,0.02), rgba(0,0,0,0.08)), url('../images/duo-1-cover.png');
+  background-image: linear-gradient(rgba(0,0,0,0.02), rgba(0,0,0,0.08)), url('../images/duo-1-cover.jpg');
 }
 
 .blog-cover .cover-bg.cover-duo-2 {
-  background-image: linear-gradient(rgba(0,0,0,0.02), rgba(0,0,0,0.08)), url('../images/duo-2-cover.png');
+  background-image: linear-gradient(rgba(0,0,0,0.02), rgba(0,0,0,0.08)), url('../images/duo-2-cover.jpg');
 }
 
 .blog-cover .cover-bg.cover-duo-3 {
-  background-image: linear-gradient(rgba(0,0,0,0.02), rgba(0,0,0,0.08)), url('../images/duo-3-cover.png');
+  background-image: linear-gradient(rgba(0,0,0,0.02), rgba(0,0,0,0.08)), url('../images/duo-3-cover.jpg');
 }
 
 .modal-cover .cover-bg.gradient-1 {
@@ -369,7 +369,7 @@ ul {
 }
 
 .modal-cover .cover-bg.gradient-4 {
-  background-image: url('../images/oce-2-cover.png') !important;
+  background-image: url('../images/oce-2-cover.jpg') !important;
   background-size: cover;
   background-position: center;
 }
@@ -381,25 +381,25 @@ ul {
 }
 
 .modal-cover .cover-bg.gradient-7 {
-  background-image: url('../images/oce-4-cover.png') !important;
+  background-image: url('../images/oce-4-cover.jpg') !important;
   background-size: cover;
   background-position: center;
 }
 
 .modal-cover .cover-bg.cover-duo-1 {
-  background-image: url('../images/duo-1-cover.png') !important;
+  background-image: url('../images/duo-1-cover.jpg') !important;
   background-size: cover;
   background-position: center;
 }
 
 .modal-cover .cover-bg.cover-duo-2 {
-  background-image: url('../images/duo-2-cover.png') !important;
+  background-image: url('../images/duo-2-cover.jpg') !important;
   background-size: cover;
   background-position: center;
 }
 
 .modal-cover .cover-bg.cover-duo-3 {
-  background-image: url('../images/duo-3-cover.png') !important;
+  background-image: url('../images/duo-3-cover.jpg') !important;
   background-size: cover;
   background-position: center;
 }
