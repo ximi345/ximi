@@ -1432,6 +1432,19 @@ body {
 /* ===== Workflow Timeline (large screen) ===== */
 #workflow {
   background: #f0ede4;
+  justify-content: flex-start;
+  padding-top: clamp(40px, 8vh, 80px);
+}
+
+#workflow .container {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - clamp(40px, 8vh, 80px));
+  max-height: 100%;
+}
+
+#workflow .exp-header {
+  flex-shrink: 0;
 }
 
 #workflow::before {
@@ -1450,6 +1463,24 @@ body {
 
 .workflow-timeline {
   max-width: 900px;
+  flex: 1 1 auto;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(24, 33, 29, 0.2) transparent;
+  padding-right: 8px;
+}
+
+.workflow-timeline::-webkit-scrollbar {
+  width: 4px;
+}
+
+.workflow-timeline::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.workflow-timeline::-webkit-scrollbar-thumb {
+  background: rgba(24, 33, 29, 0.15);
+  border-radius: 4px;
 }
 
 .workflow-step {
