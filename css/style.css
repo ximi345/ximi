@@ -433,6 +433,91 @@ ul {
   color: var(--accent);
 }
 
+/* ===== Workflow Timeline ===== */
+.workflow-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 8px;
+}
+
+.workflow-step {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 24px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+}
+
+.workflow-step:last-child {
+  border-bottom: none;
+}
+
+.workflow-number {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 2px;
+}
+
+.workflow-number span {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--accent);
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.workflow-step:hover .workflow-number span {
+  opacity: 1;
+}
+
+.workflow-content h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.workflow-content p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 8px;
+}
+
+.workflow-content p:last-child {
+  margin-bottom: 0;
+}
+
+.workflow-content ul {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+}
+
+.workflow-content ul li {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  padding-left: 18px;
+  position: relative;
+  margin-bottom: 4px;
+}
+
+.workflow-content ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0.6;
+}
+
 /* ===== Modal ===== */
 .modal-overlay {
   position: fixed;
@@ -801,6 +886,28 @@ ul {
 
   .exp-header-left h2 {
     font-size: 1.375rem;
+  }
+
+  .workflow-step {
+    grid-template-columns: 44px 1fr;
+    gap: 14px;
+    padding: 14px 0;
+  }
+
+  .workflow-number span {
+    font-size: 1.1rem;
+  }
+
+  .workflow-content h3 {
+    font-size: 1rem;
+  }
+
+  .workflow-content p {
+    font-size: 0.85rem;
+  }
+
+  .workflow-content ul li {
+    font-size: 0.8rem;
   }
 
   /* Full-screen modal on mobile */
@@ -1320,6 +1427,68 @@ body {
 .blog-card:hover .cover-bg {
   transform: scale(1.055);
   filter: saturate(1.08);
+}
+
+/* ===== Workflow Timeline (large screen) ===== */
+#workflow {
+  background: #f0ede4;
+}
+
+#workflow::before {
+  content: attr(id);
+  position: absolute;
+  z-index: -1;
+  right: -0.03em;
+  bottom: -0.18em;
+  color: rgba(24, 33, 29, 0.035);
+  font-size: clamp(8rem, 20vw, 19rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.08em;
+  text-transform: uppercase;
+}
+
+.workflow-timeline {
+  max-width: 900px;
+}
+
+.workflow-step {
+  padding: 28px 0;
+  border-color: rgba(24, 33, 29, 0.12);
+}
+
+.workflow-number span {
+  font-size: 2rem;
+  color: var(--ink);
+  opacity: 0.25;
+}
+
+.workflow-step:hover .workflow-number span {
+  opacity: 0.7;
+  color: var(--ink);
+}
+
+.workflow-content h3 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+
+.workflow-content p {
+  font-size: 0.95rem;
+  color: rgba(24, 33, 29, 0.72);
+  line-height: 1.75;
+}
+
+.workflow-content ul li {
+  font-size: 0.9rem;
+  color: rgba(24, 33, 29, 0.72);
+}
+
+.workflow-content ul li::before {
+  background: var(--ink);
+  opacity: 0.4;
 }
 
 .blog-body {
