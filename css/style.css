@@ -924,13 +924,11 @@ ul {
 
   .workflow-rail {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: row;
     overflow-x: auto;
-    overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: thin;
     scrollbar-color: rgba(24, 33, 29, 0.2) rgba(24, 33, 29, 0.06);
-    overscroll-behavior-x: contain;
   }
   .workflow-rail::-webkit-scrollbar {
     height: 6px;
