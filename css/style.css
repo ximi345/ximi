@@ -449,6 +449,7 @@ ul {
   padding: 16px 10px;
   border-left: 1px solid var(--border);
   min-width: 0;
+  overflow: hidden;
 }
 
 .workflow-step:first-child {
@@ -479,20 +480,31 @@ ul {
 
 .workflow-tools {
   display: flex;
-  flex-wrap: wrap;
-  gap: 4px;
+  flex-direction: column;
+  gap: 3px;
   margin-top: 8px;
 }
 
-.workflow-tools span {
-  font-size: 0.65rem;
+.wf-tool {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.62rem;
   font-weight: 600;
-  line-height: 1;
-  padding: 3px 6px;
-  border-radius: 4px;
-  background: rgba(24, 33, 29, 0.06);
-  color: rgba(24, 33, 29, 0.55);
+  line-height: 1.3;
+  color: var(--text-secondary);
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.wf-tool::before {
+  content: '';
+  flex-shrink: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--tc, var(--accent));
 }
 
 /* ===== Modal ===== */
@@ -887,9 +899,13 @@ ul {
     line-height: 1.4;
   }
 
-  .workflow-tools span {
+  .wf-tool {
     font-size: 8px;
-    padding: 2px 4px;
+  }
+
+  .wf-tool::before {
+    width: 5px;
+    height: 5px;
   }
 
   /* Full-screen modal on mobile */
@@ -1439,6 +1455,7 @@ body {
   position: relative;
   padding: clamp(20px, 3vh, 32px) 12px clamp(18px, 2.7vh, 28px);
   border-left: 1px solid rgba(24, 33, 29, 0.16);
+  overflow: hidden;
   transition: color 0.35s, background 0.35s, transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -1489,18 +1506,24 @@ body {
   margin-top: 10px;
 }
 
-.workflow-tools span {
-  font-size: clamp(9px, 0.75vw, 11px);
-  padding: 4px 7px;
-  border-radius: 5px;
-  background: rgba(24, 33, 29, 0.07);
+.wf-tool {
+  font-size: clamp(9px, 0.72vw, 11px);
   color: rgba(24, 33, 29, 0.5);
-  transition: background 0.35s, color 0.35s;
+  transition: color 0.35s;
 }
 
-.workflow-step:hover .workflow-tools span {
-  background: rgba(255, 255, 255, 0.15);
-  color: rgba(255, 255, 255, 0.8);
+.wf-tool::before {
+  width: 7px;
+  height: 7px;
+  transition: box-shadow 0.35s;
+}
+
+.workflow-step:hover .wf-tool {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.workflow-step:hover .wf-tool::before {
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
 }
 
 .blog-body {
