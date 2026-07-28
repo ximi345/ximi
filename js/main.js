@@ -314,27 +314,44 @@
   if (!scroll) return;
 
   var paused = false;
+  var visible = false;
   var rafId = null;
 
   function autoScroll() {
-    if (paused) {
-      rafId = requestAnimationFrame(autoScroll);
-      return;
-    }
-    if (scroll.scrollLeft + scroll.clientWidth >= scroll.scrollWidth - 1) {
-      scroll.scrollTo({ left: 0, behavior: "smooth" });
-    } else {
-      scroll.scrollLeft += 0.4;
-    }
     rafId = requestAnimationFrame(autoScroll);
+    if (paused || !visible) return;
+    if (scroll.scrollLeft + scroll.clientWidth >= scroll.scrollWidth - 1) {
+      scroll.scrollLeft = 0;
+    } else {
+      scroll.scrollLeft += 0.5;
+    }
   }
 
   scroll.addEventListener("mouseenter", function () { paused = true; });
   scroll.addEventListener("mouseleave", function () { paused = false; });
   scroll.addEventListener("touchstart", function () { paused = true; }, { passive: true });
   scroll.addEventListener("touchend", function () {
-    setTimeout(function () { paused = false; }, 2000);
+    setTimeout(function () { paused = false; }, 3000);
   });
+  scroll.addEventListener("wheel", function (e) {
+    if (e.deltaX !== 0 || (e.shiftKey && e.deltaY !== 0)) {
+      paused = true;
+      clearTimeout(scroll._resumeTimer);
+      scroll._resumeTimer = setTimeout(function () { paused = false; }, 3000);
+    }
+  }, { passive: true });
+
+  var section = document.getElementById("subplaza");
+  if (section && "IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        visible = entry.isIntersecting && entry.intersectionRatio > 0.3;
+      });
+    }, { threshold: [0, 0.3, 0.5] });
+    io.observe(section);
+  } else {
+    visible = true;
+  }
 
   rafId = requestAnimationFrame(autoScroll);
 })();
