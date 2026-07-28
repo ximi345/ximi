@@ -1737,8 +1737,8 @@ body {
 }
 
 .software-prof-track {
-  height: 6px;
-  border-radius: 3px;
+  height: 8px;
+  border-radius: 4px;
   background: rgba(24, 33, 29, 0.08);
   overflow: hidden;
   transition: background 0.35s;
@@ -1746,7 +1746,8 @@ body {
 
 .software-prof-fill {
   height: 100%;
-  border-radius: 3px;
+  border-radius: 4px;
+  background: var(--ink);
   transition: opacity 0.35s;
 }
 
@@ -2041,7 +2042,7 @@ body {
   .software-item > p { font-size: 8px; }
   .software-prof { padding-top: 8px; }
   .software-prof-label { font-size: 6px; margin-bottom: 3px; }
-  .software-prof-track { height: 4px; }
+  .software-prof-track { height: 5px; }
   .software-footer { gap: 8px; margin-top: 10px; font-size: 7px; }
   .contact-card h1 { font-size: 3.5rem; }
   .contact-card > p { margin-bottom: 24px; font-size: 12px; }
