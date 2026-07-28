@@ -285,10 +285,11 @@ ul {
   flex-direction: column-reverse;
   overflow-x: auto;
   overflow-y: hidden;
-  -webkit-overflow-scrolling: touch;
+  -webkit-overflow-scrolling: auto;
   scroll-snap-type: x proximity;
   scrollbar-width: thin;
   scrollbar-color: rgba(24, 33, 29, 0.2) rgba(24, 33, 29, 0.06);
+  overscroll-behavior-x: contain;
 }
 
 .blog-scroll::-webkit-scrollbar {
@@ -481,6 +482,10 @@ ul {
   margin-top: 8px;
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
+}
+
+.workflow-rail-inner {
+  display: contents;
 }
 
 .workflow-step {
@@ -918,8 +923,33 @@ ul {
   }
 
   .workflow-rail {
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-direction: column-reverse;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(24, 33, 29, 0.2) rgba(24, 33, 29, 0.06);
+    overscroll-behavior-x: contain;
+  }
+  .workflow-rail::-webkit-scrollbar {
+    height: 6px;
+  }
+  .workflow-rail::-webkit-scrollbar-track {
+    background: rgba(24, 33, 29, 0.06);
+    border-radius: 3px;
+  }
+  .workflow-rail::-webkit-scrollbar-thumb {
+    background: rgba(24, 33, 29, 0.2);
+    border-radius: 3px;
+  }
+  .workflow-rail-inner {
+    display: flex;
+    flex-direction: row;
     gap: 0;
+  }
+  .workflow-rail-inner > .workflow-step {
+    flex: 0 0 45%;
   }
 
   .workflow-step {
@@ -927,7 +957,7 @@ ul {
   }
 
   .workflow-step:nth-child(4) {
-    border-left: none;
+    border-left: 1px solid var(--border);
   }
 
   .workflow-step h3 {
@@ -2031,19 +2061,15 @@ body {
   .avatar-wrap { width: min(36vw, 300px); height: min(36vw, 300px); }
   .exp-header { gap: 34px; }
   .blog-grid {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 12px;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    padding-bottom: 4px;
-    scroll-snap-type: x proximity;
+    overflow: visible;
   }
-  .blog-grid::-webkit-scrollbar { display: none; }
   .blog-grid .blog-card {
-    flex: 0 0 70%;
-    scroll-snap-align: start;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    align-items: center;
   }
   .blog-scroll {
     display: grid;
@@ -2054,7 +2080,12 @@ body {
   .blog-scroll-inner {
     display: contents;
   }
-  .blog-scroll-inner > .blog-card { flex: none; }
+  .blog-scroll-inner > .blog-card {
+    flex: none;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    align-items: center;
+  }
   .blog-card { border-radius: 18px; }
   .blog-cover { border-radius: 13px; }
   .blog-body { padding: 8px 14px 16px; }
@@ -2096,21 +2127,16 @@ body {
   .exp-header-left .exp-meta { margin-top: 8px; }
   .exp-header-right { font-size: 11px; line-height: 1.5; }
   .blog-grid {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 10px;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    padding-bottom: 4px;
-    scroll-snap-type: x proximity;
+    overflow: visible;
   }
-  .blog-grid::-webkit-scrollbar { display: none; }
   .blog-grid .blog-card {
-    flex: 0 0 75%;
-    scroll-snap-align: start;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    align-items: center;
+    border-radius: 16px;
   }
   .blog-scroll {
     display: grid;
@@ -2121,7 +2147,12 @@ body {
   .blog-scroll-inner {
     display: contents;
   }
-  .blog-scroll-inner > .blog-card { flex: none; }
+  .blog-scroll-inner > .blog-card {
+    flex: none;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    align-items: center;
+  }
   .blog-cover { width: calc(100% - 12px); margin: 6px; border-radius: 11px; }
   .blog-body { padding: 10px 12px 10px 8px; }
   .blog-title { font-size: 11px; -webkit-line-clamp: 3; line-clamp: 3; }
