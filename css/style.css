@@ -1553,7 +1553,7 @@ body {
 
 .software-rail {
   display: grid;
-  grid-template-columns: repeat(8, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   border-top: 1px solid rgba(24, 33, 29, 0.25);
   border-bottom: 1px solid rgba(24, 33, 29, 0.25);
 }
@@ -1881,8 +1881,8 @@ body {
   .blog-title { font-size: 12px; }
   .software-container { width: min(100% - 80px, 820px); }
   .software-heading { gap: 36px; }
-  .software-rail { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-  .software-item:nth-child(n + 5) { border-top: 1px solid rgba(24, 33, 29, 0.16); }
+  .software-rail { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .software-item:nth-child(n + 4) { border-top: 1px solid rgba(24, 33, 29, 0.16); }
   .software-mark { width: 50px; height: 50px; }
 }
 
