@@ -307,3 +307,34 @@
     if (e.key === "Escape") closeModal();
   });
 })();
+
+/* ===== Subplaza Auto-Scroll Carousel ===== */
+(function () {
+  var scroll = document.getElementById("subplazaScroll");
+  if (!scroll) return;
+
+  var paused = false;
+  var rafId = null;
+
+  function autoScroll() {
+    if (paused) {
+      rafId = requestAnimationFrame(autoScroll);
+      return;
+    }
+    if (scroll.scrollLeft + scroll.clientWidth >= scroll.scrollWidth - 1) {
+      scroll.scrollTo({ left: 0, behavior: "smooth" });
+    } else {
+      scroll.scrollLeft += 0.4;
+    }
+    rafId = requestAnimationFrame(autoScroll);
+  }
+
+  scroll.addEventListener("mouseenter", function () { paused = true; });
+  scroll.addEventListener("mouseleave", function () { paused = false; });
+  scroll.addEventListener("touchstart", function () { paused = true; }, { passive: true });
+  scroll.addEventListener("touchend", function () {
+    setTimeout(function () { paused = false; }, 2000);
+  });
+
+  rafId = requestAnimationFrame(autoScroll);
+})();
